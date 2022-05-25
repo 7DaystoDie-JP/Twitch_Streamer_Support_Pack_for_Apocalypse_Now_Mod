@@ -1,0 +1,129 @@
+<configs>
+	<append xpath="/blocks">
+		<block name="cntShippingCrateJunk">
+			<property name="CustomIcon" value="cntShippingCrateHero" />
+			<property name="CustomIconTint" value="9C8867" />
+			<property name="DescriptionKey" value="cntShippingCrateJunkDesc" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Path" value="solid" />
+			<property name="Model" value="#Entities/LootContainers?crate_storePrefab.prefab" />
+			<property name="PickupJournalEntry" value="gachaboxTip" />
+			<property name="DisplayInfo" value="Name" />
+			<property name="Material" value="Mwood_regular" />
+			<drop event="Destroy" count="0" />
+			<property name="DowngradeBlock" value="cntLootCrateJunk" />
+			<property name="FilterTags" value="floot" />
+		</block>
+		<block name="cntShippingCrateCommon">
+			<property name="Extends" value="cntShippingCrateJunk" />
+			<property name="CustomIconTint" value="CF7F29" />
+			<property name="DescriptionKey" value="cntShippingCrateCommonDesc" />
+			<property name="DowngradeBlock" value="cntLootCrateCommon" />
+		</block>
+		<block name="cntShippingCrateUncommon">
+			<property name="Extends" value="cntShippingCrateJunk" />
+			<property name="CustomIconTint" value="A2A41B" />
+			<property name="DescriptionKey" value="cntShippingCrateUncommonDesc" />
+			<property name="DowngradeBlock" value="cntLootCrateUncommon" />
+		</block>
+		<block name="cntShippingCrateRare">
+			<property name="Extends" value="cntShippingCrateJunk" />
+			<property name="CustomIconTint" value="42C234" />
+			<property name="DescriptionKey" value="cntShippingCrateRareDesc" />
+			<property name="DowngradeBlock" value="cntLootCrateRare" />
+		</block>
+		<block name="cntShippingCrateEpic">
+			<property name="Extends" value="cntShippingCrateJunk" />
+			<property name="CustomIconTint" value="315DCE" />
+			<property name="DescriptionKey" value="cntShippingCrateEpicDesc" />
+			<property name="DowngradeBlock" value="cntLootCrateEpic" />
+		</block>
+		<block name="cntShippingCrateLegendary">
+			<property name="Extends" value="cntShippingCrateJunk" />
+			<property name="CustomIconTint" value="A42ACC" />
+			<property name="DescriptionKey" value="cntShippingCrateLegendaryDesc" />
+			<property name="DowngradeBlock" value="cntLootCrateLegendary" />
+		</block>
+		<block name="cntShippingCrateHeroic">
+			<property name="Extends" value="cntShippingCrateJunk" />
+			<property name="CustomIconTint" value="660066" />
+			<property name="DescriptionKey" value="cntShippingCrateHeroicDesc" />
+			<property name="DowngradeBlock" value="cntLootCrateHeroic" />
+		</block>
+		<block name="cntLootCrateJunk">
+			<property name="CustomIcon" value="cntGarageStorage" />
+			<property name="DescriptionKey" value="creativeMenuBlockGroupDesc" />
+			<property name="Class" value="Loot" />
+			<property name="Material" value="MCardboardLoot" />
+			<property name="Path" value="solid" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="cube_no_cull" />
+			<!-- will not hide adjacent faces (if rotated) -->
+			<property name="AllowAllRotations" value="true" />
+			<property name="Texture" value="276,276,270,270,270,270" />
+			<property name="LootList" value="gachabox_junk" />
+			<property class="RepairItems">
+				<property name="resourcePaper" value="10" />
+				<property name="resourceWood" value="4" />
+			</property>
+			<drop event="Destroy" name="resourcePaper" count="2,8" />
+			<property name="FilterTags" value="floot" />
+		</block>
+		<block name="cntLootCrateCommon">
+			<property name="Extends" value="cntLootCrateJunk" />
+			<property name="LootList" value="gachabox_common" />
+		</block>
+		<block name="cntLootCrateUncommon">
+			<property name="Extends" value="cntLootCrateJunk" />
+			<property name="LootList" value="gachabox_uncommon" />
+		</block>
+		<block name="cntLootCrateRare">
+			<property name="Extends" value="cntLootCrateJunk" />
+			<property name="LootList" value="gachabox_rare" />
+		</block>
+		<block name="cntLootCrateEpic">
+			<property name="Extends" value="cntLootCrateJunk" />
+			<property name="LootList" value="gachabox_epic" />
+		</block>
+		<block name="cntLootCrateLegendary">
+			<property name="Extends" value="cntLootCrateJunk" />
+			<property name="LootList" value="gachabox_legendary" />
+		</block>
+		<block name="cntLootCrateHeroic">
+			<property name="Extends" value="cntLootCrateJunk" />
+			<property name="LootList" value="gachabox_heroic" />
+		</block>
+		<block name="cntBuriedLootStashChest_middle">
+			<property name="Extends" value="cntLootChestHero" param1="DescriptionKey" />
+			<property name="Tags" value="buriedTreasure" />
+			<property name="CustomIcon" value="cntLootChestHero" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="LootList" value="gachabox_epic_only" />
+			<property name="CreativeMode" value="Dev" />
+			<property name="DowngradeBlock" value="cntBuriedLootStashChest_middleInsecure" />
+		</block>
+		<block name="cntBuriedLootStashChest_middleInsecure">
+			<property name="Extends" value="cntLootChestHeroInsecure" param1="DescriptionKey" />
+			<property name="Tags" value="buriedTreasure" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="LootList" value="gachabox_epic_only" />
+			<property name="CreativeMode" value="None" />
+		</block>
+		<block name="cntBuriedLootStashChest_advanced">
+			<property name="Extends" value="cntLootChestHero" param1="DescriptionKey" />
+			<property name="Tags" value="buriedTreasure" />
+			<property name="CustomIcon" value="cntLootChestHero" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="LootList" value="gachabox_legendary_only" />
+			<property name="CreativeMode" value="Dev" />
+			<property name="DowngradeBlock" value="cntBuriedLootStashChest_advancedInsecure" />
+		</block>
+		<block name="cntBuriedLootStashChest_advancedInsecure">
+			<property name="Extends" value="cntLootChestHeroInsecure" param1="DescriptionKey" />
+			<property name="Tags" value="buriedTreasure" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="LootList" value="gachabox_heroic_only" />
+			<property name="CreativeMode" value="None" />
+		</block>
+	</append>
+</configs>

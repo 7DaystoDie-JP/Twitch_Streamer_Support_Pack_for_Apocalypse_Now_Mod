@@ -1,0 +1,765 @@
+<configs>
+    <append xpath="/entity_classes">
+        <entity_class name="TwitchAction_GachaBoxJunk" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_junk_only" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxCommon" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_common_only" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxUncommon" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_uncommon_only" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxRare" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_rare_only" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxEpic" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_epic_only" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxLegendary" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_legendary_only" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxHeroic" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_heroic_only" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxT1" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_t1" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxT2" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_t2" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxT3" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_t3" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxT4" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_t4" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxT5" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_t5" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxT6" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_t6" />
+        </entity_class>
+        <entity_class name="TwitchAction_GachaBoxAll" extends="twitch_crate_template">
+            <property name="Mesh" value="#Entities/LootContainers?crate_storeSignablePrefab.prefab" />
+            <property name="LootListOnDeath" value="gachabox_all" />
+        </entity_class>
+        <entity_class name="zombieScreamerTwitch" extends="zombieScreamer">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT1" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="150" />
+            </effect_group>
+		<effect_group>
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1"></triggered_effect>
+		</effect_group>
+        </entity_class>
+        <entity_class name="zombieScreamerFeralTwitch" extends="zombieScreamerFeral">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT1" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieScreamerRadiatedTwitch" extends="zombieScreamerRadiated">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT2" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="500" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFNightStalkerTwitch" extends="DFNightStalker">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT2" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFNightStalkerBossTwitch" extends="DFNightStalkerBoss">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="1500" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFzombieTitanTwitch" extends="DFzombieTitan">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT5" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="8000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFzombieTitanRadiatedTwitch" extends="DFzombieTitanRadiated">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT5" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="15000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFzombieBehemothTwitch" extends="DFzombieBehemoth">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT4" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="5000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFzombieBehemothRadiatedTwitch" extends="DFzombieBehemothRadiated">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT5" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="8000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieBehemothFemaleTwitch" extends="zombieBehemothFemale">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT4" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="5000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieBehemothRadiatedFemaleTwitch" extends="zombieBehemothRadiatedFemale">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT5" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="8000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DemonBehemothTwitch" extends="DemonBehemoth">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT6" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="50000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieBusinessWomanDemonTwitch" extends="zombieBusinessWomanDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieCheerleaderDemonTwitch" extends="zombieCheerleaderDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieOldTimerDemonTwitch" extends="zombieOldTimerDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieWightDemonTwitch" extends="zombieWightDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieBoeDemonTwitch" extends="zombieBoeDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieFemaleFatDemonTwitch" extends="zombieFemaleFatDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieJoeDemonTwitch" extends="zombieJoeDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieMoeDemonTwitch" extends="zombieMoeDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieArleneDemonTwitch" extends="zombieArleneDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieLabDemonTwitch" extends="zombieLabDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieDarleneDemonTwitch" extends="zombieDarleneDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieMarleneDemonTwitch" extends="zombieMarleneDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieYoDemonTwitch" extends="zombieYoDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieSteveDemonTwitch" extends="zombieSteveDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieBusinessManDemonTwitch" extends="zombieBusinessManDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieSpiderDemonTwitch" extends="zombieSpiderDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieNurseDemonTwitch" extends="zombieNurseDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieFatHawaiianDemonTwitch" extends="zombieFatHawaiianDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieFatCopDemonTwitch" extends="zombieFatCopDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieMaleHazmatDemonTwitch" extends="zombieMaleHazmatDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieUtilityWorkerDemonTwitch" extends="zombieUtilityWorkerDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieSoldierDemonTwitch" extends="zombieSoldierDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieSkateboarderDemonTwitch" extends="zombieSkateboarderDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieJanitorDemonTwitch" extends="zombieJanitorDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombieBikerDemonTwitch" extends="zombieBikerDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="zombiePartyGirlDemonTwitch" extends="zombiePartyGirlDemon">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="SuccubusTwitch" extends="Succubus">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT5" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="15000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="IncubusTwitch" extends="Incubus">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT5" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="20000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor5Club" extends="DFFemaleSurvivor1Club">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor5Bat" extends="DFFemaleSurvivor1Bat">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor5BatBarbed" extends="DFFemaleSurvivor1BatBarbed">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor5BatChain" extends="DFFemaleSurvivor1BatChain">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor5Knife" extends="DFFemaleSurvivor1Knife">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor5Machete" extends="DFFemaleSurvivor1Machete">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor6Club" extends="DFFemaleSurvivor2Club">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor6Bat" extends="DFFemaleSurvivor2Bat">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor6BatBarbed" extends="DFFemaleSurvivor2BatBarbed">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor6BatChain" extends="DFFemaleSurvivor2BatChain">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor6Knife" extends="DFFemaleSurvivor2Knife">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor6Machete" extends="DFFemaleSurvivor2Machete">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor7Club" extends="DFFemaleSurvivor3Club">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor7Bat" extends="DFFemaleSurvivor3Bat">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor7BatBarbed" extends="DFFemaleSurvivor3BatBarbed">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor7BatChain" extends="DFFemaleSurvivor3BatChain">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor7Knife" extends="DFFemaleSurvivor3Knife">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor7Machete" extends="DFFemaleSurvivor3Machete">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor8Club" extends="DFFemaleSurvivor4Club">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor8Bat" extends="DFFemaleSurvivor4Bat">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor8BatBarbed" extends="DFFemaleSurvivor4BatBarbed">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor8BatChain" extends="DFFemaleSurvivor4BatChain">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor8Knife" extends="DFFemaleSurvivor4Knife">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFFemaleSurvivor8Machete" extends="DFFemaleSurvivor4Machete">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor5Club" extends="DFMaleSurvivor1Club">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor5Bat" extends="DFMaleSurvivor1Bat">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor5BatBarbed" extends="DFMaleSurvivor1BatBarbed">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor5BatChain" extends="DFMaleSurvivor1BatChain">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor5Knife" extends="DFMaleSurvivor1Knife">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor5Machete" extends="DFMaleSurvivor1Machete">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor6Club" extends="DFMaleSurvivor2Club">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor6Bat" extends="DFMaleSurvivor2Bat">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor6BatBarbed" extends="DFMaleSurvivor2BatBarbed">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor6BatChain" extends="DFMaleSurvivor2BatChain">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor6Knife" extends="DFMaleSurvivor2Knife">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor6Machete" extends="DFMaleSurvivor2Machete">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor7Club" extends="DFMaleSurvivor3Club">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor7Bat" extends="DFMaleSurvivor3Bat">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor7BatBarbed" extends="DFMaleSurvivor3BatBarbed">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor7BatChain" extends="DFMaleSurvivor3BatChain">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor7Knife" extends="DFMaleSurvivor3Knife">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor7Machete" extends="DFMaleSurvivor3Machete">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor8Club" extends="DFMaleSurvivor4Club">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor8Bat" extends="DFMaleSurvivor4Bat">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor8BatBarbed" extends="DFMaleSurvivor4BatBarbed">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor8BatChain" extends="DFMaleSurvivor4BatChain">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor8Knife" extends="DFMaleSurvivor4Knife">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+        <entity_class name="DFMaleSurvivor8Machete" extends="DFMaleSurvivor4Machete">
+            <property name="LootDropProb" value="0.25" />
+            <property name="LootDropEntityClass" value="TwitchAction_GachaBoxT3" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$TwitchKillCount" operation="add" value="1" />
+            </effect_group>
+        </entity_class>
+    </append>
+</configs>

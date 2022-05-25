@@ -1,0 +1,11 @@
+<configs>
+    <!-- Twitch	Status Add on -->
+	<!-- <append xpath="/buffs/buff[@name='buffStatusCheck01']">
+        <effect_group>
+            <requirement name="ItemHasTags" tags="perkASMiningTools" />
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$Twitch_Lvl" operation="set" value="@$AS_MiningTools_Lvl" />
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$Twitch_XP" operation="set" value="@$AS_MiningTools_XP" />
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$Twitch_Next" operation="set" value="@$AS_MiningTools_LvlNextTotal" />
+        </effect_group>
+	</append> -->
+</configs>

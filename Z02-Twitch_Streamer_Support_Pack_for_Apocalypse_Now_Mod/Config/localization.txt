@@ -1,0 +1,306 @@
+Key,English,Japanese
+
+TwitchToolsAnnouncement,Twitch Changing List,Twitch 仕様一覧
+TwitchToolsAnnouncementDesc,Please see what are changed for Twitch Integration in Journal.,Twitchインテグレーションに関する仕様変更があります。ジャーナルにて確認お願いします。
+TwitchToolsTip_title,[FF9800]MOD[-]　-　Twitch,[FF9800]MOD[-]　-　Twitch
+TwitchToolsTip,Added several contents for Twitch streamer who are playing Darkness Falls Mod.\n\n[FF9800]1. Contents Ver.4.03[-]\nAdded Twitch integration commands for Darkness Falls Mod\nAdded Special supply box for Darkness Falls Mod\n\n[FF9800]2. Future Updates[-]\nReview/Update Twitch integration commands\nReview/Update Special supply box\n\nMore detail in Website\nhttps://7daystodie.jp/mods/twitch_streamer_support_pack_for_darkness_falls_mod/index.html\n\nMod Name: Twitch_Streamer_Support_Pack_for_Darkness_Falls_Mod\nAuthor: 7 Days to Die Gaming Community Japan\nVersion: 4.03\nWebsite: https://7daystodie.jp/\nDiscord: https://discord.gg/bdW6msJ6M2,ダークネスフォールズMODを利用しTwitch配信を行うストリーマー向けに開発されたMODです。DF専用アイテムの追加支援ボックス、ゾンビスポーン等のコマンドの追加他、視聴者側に便利なTwitchインテグレーションコピーツールも利用可能です。\n\n[FF9800]1. コンテンツ内容 Ver.4.03[-]\nダークネスフォールズMOD用Twitchコマンドの追加\nダークネスフォールズMOD専用ゾンビ、NPCをスポーンさせるコマンド\n・ダークネスフォールズMOD専用アイテムが封入された、専用サプライボックス(通称: ガチャボックス)\n\n[FF9800]2. 次回アップデート予定[-]\n・追加Twitchコマンドの検討\n・ガチャボックスアイテム内容の更新\n\nMod Name: Twitch_Streamer_Support_Pack_for_Darkness_Falls_Mod\nAuthor: 7 Days to Die Gaming Community Japan\nVersion: 4.03\nWebsite: https://7daystodie.jp/\nDiscord: https://discord.gg/bdW6msJ6M2
+
+TwitchActionCategory_DF,Darkness Falls,Darkness Falls
+
+TwitchAction_MiniHorde1,Mini Horde Tier1,ミニホード Tier1
+TwitchAction_MiniHorde1Command,#mini_horde1,#ミニホード1
+TwitchAction_MiniHorde1Desc,Spawn Zombie Scouts. Zombies may be increased depends on your game stage.\nRewards:Gacha Box Tier1~3,コマンド概要:\n絶叫ゾンビ各種のうち、いずれかを出現させます。ゲームステージにより絶叫ゾンビ襲撃数が変更され、支援物資、サバイバーのサポートが得られます。\n\n報酬:\nガチャボックス Tier1~2 *ゾンビドロップとして
+
+TwitchAction_MiniHorde2,Mini Horde Tier2,ミニホード Tier2
+TwitchAction_MiniHorde2Command,#mini_horde2,#ミニホード2
+TwitchAction_MiniHorde2Desc,Spawn Nighr Stalkers. Zombies may be increased depends on your game stage.\nRewards:Gacha Box Tier2~3,コマンド概要:\nナイトストーカー各種のうち、いずれかを出現させます。ゲームステージによりナイトストーカー襲撃数が変更され、支援物資、サバイバーのサポートが得られます。\n\n報酬:\nガチャボックス Tier2~3 *ゾンビドロップとして
+
+TwitchAction_MiniHorde3,Mini Horde Tier3,ミニホード Tier3
+TwitchAction_MiniHorde3Command,#mini_horde3,#ミニホード3
+TwitchAction_MiniHorde3Desc,Spawn Demon Zombies. Zombies may be increased depends on your game stage.\nRewards:Gacha Box Tier3,コマンド概要:\nデモニックゾンビ各種のうち、いずれかを出現させます。ゲームステージによりデモニックゾンビ襲撃数が変更され、支援物資、サバイバーのサポートが得られます。\n\n報酬:\nガチャボックス Tier3 *ゾンビドロップとして
+
+TwitchAction_MiniHorde4,Mini Horde Tier4,ミニホード Tier4
+TwitchAction_MiniHorde4Command,#mini_horde4,#ミニホード4
+TwitchAction_MiniHorde4Desc,Spawn Incubus. Zombies may be increased depends on your game stage.\nRewards:Gacha Box Tier3~5,コマンド概要:\nインキュバスグループを出現させます。ゲームステージによりゾンビ襲撃数が変更され、支援物資、サバイバーのサポートが得られます。\n\n報酬:\nガチャボックス Tier3~5 *ゾンビドロップとして
+
+TwitchAction_MiniHorde5,Mini Horde Tier5,ミニホード Tier5
+TwitchAction_MiniHorde5Command,#mini_horde5,#ミニホード5
+TwitchAction_MiniHorde5Desc,Spawn Succubus. Zombies may be increased depends on your game stage.\nRewards:Gacha Box Tier3~5,コマンド概要:\nサキュバスグループを出現させます。ゲームステージによりゾンビ襲撃数が変更され、支援物資、サバイバーのサポートが得られます。\n\n報酬:\nガチャボックス Tier3~5 *ゾンビドロップとして
+
+TwitchAction_MiniHorde6,Mini Horde Tier6,ミニホード Tier6
+TwitchAction_MiniHorde6Command,#mini_horde6,#ミニホード6
+TwitchAction_MiniHorde6Desc,Spawn Incubus. Zombies may be increased depends on your game stage.\nRewards:Gacha Box Tier4~6,コマンド概要:\nベヒモスグループを出現させます。ゲームステージによりゾンビ襲撃数が変更され、支援物資、サバイバーのサポートが得られます。\n\n報酬:\nガチャボックス Tier4~6 *ゾンビドロップとして
+
+TwitchAction_SpawnSurvivor,Survivor,サバイバー
+TwitchAction_SpawnSurvivorCommand,#spawn_survivor,#サバイバー
+TwitchAction_SpawnSurvivorDesc,Spawn survivors. They maybe or may not be helped you...,サバイバー各種のうち、いずれかをスポーンさせます。
+
+gachaboxTip,A box containing the specified items at random.There are total 7 rarity.\n\n[9C8867]Junk[-]/[CF7F29]Common[-]/[A2A41B]Uncommon[-]/[42C234]Rare[-]/[315DCE]Epic[-]/[A42ACC]Legendary[-]/[660066]Heroic[-]\n\nMod Name: Twitch_Streamer_Support_Pack_for_Darkness_Falls_Mod\nAuthor: 7 Days to Die Gaming Community Japan\nVersion: 4.03\nWebsite: https://7daystodie.jp/\nDiscord: https://discord.gg/bdW6msJ6M2 ,指定されたアイテムがランダムに入っているボックスで、主に報酬等で入手できます。以下7種類のレア度が存在し、レア度に応じて内容が異なります。\n\n[9C8867]ジャンク[-]/[CF7F29]コモン[-]/[A2A41B]アンコモン[-]/[42C234]レア[-]/[315DCE]エピック[-]/[A42ACC]レジェンダリー[-]/[660066]ヒロイック[-]\n\nMod Name: Twitch_Streamer_Support_Pack_for_Darkness_Falls_Mod\nAuthor: 7 Days to Die Gaming Community Japan\nVersion: 4.03\nWebsite: https://7daystodie.jp/\nDiscord: https://discord.gg/bdW6msJ6M2
+gachaboxTip_title,[AED6F1]Changes[-] - Gacha Box,[AED6F1]仕様変更[-] - ガチャボックス
+
+gachaboxTiploading,A box containing the specified items at random.There are total 7 rarity.,指定されたアイテムがランダムに入っているボックスで、主に報酬等で入手できます。以下7種類のレア度が存在し、レア度に応じて内容が異なります。
+gachaboxTiploading_title,[AED6F1]Changes[-] - Gacha Box,[AED6F1]仕様変更[-] - ガチャボックス
+
+TwitchActionCategory_Gacha,Gacha Box,ガチャBOX
+
+TwitchAction_GachaBoxJunk,Gacha Box Junk,ガチャBOX - ジャンク
+TwitchAction_GachaBoxJunkCommand,#supply_gachajunk,#ジャンク
+TwitchAction_GachaBoxJunkDesc,Supply 1x GachaBox Junk,ガチャBOX - ジャンクを支給する
+TwitchAction_GachaBoxCommon,Gacha Box Common,ガチャBOX - コモン
+TwitchAction_GachaBoxCommonCommand,#supply_gachacommon,#コモン
+TwitchAction_GachaBoxCommonDesc,Supply 1x GachaBox Common,ガチャBOX - コモンを支給する
+TwitchAction_GachaBoxUncommon,Gacha Box Uncommon,ガチャBOX - アンコモン
+TwitchAction_GachaBoxUncommonCommand,#supply_gachauncommon,#アンコモン
+TwitchAction_GachaBoxUncommonDesc,Supply 1x GachaBox Uncommon,ガチャBOX - アンコモンを支給する
+TwitchAction_GachaBoxRare,Gacha Box Rare,ガチャBOX - レア
+TwitchAction_GachaBoxRareCommand,#supply_gacharare,#レア
+TwitchAction_GachaBoxRareDesc,Supply 1x GachaBox Rare,ガチャBOX - レアを支給する
+TwitchAction_GachaBoxEpic,Gacha Box Epic,ガチャBOX - エピック
+TwitchAction_GachaBoxEpicCommand,#supply_gachaepic,#エピック
+TwitchAction_GachaBoxEpicDesc,Supply 1x GachaBox Epic,ガチャBOX - エピックを支給する
+TwitchAction_GachaBoxLegendary,Gacha Box Legendary,ガチャBOX - レジェンダリー
+TwitchAction_GachaBoxLegendaryCommand,#supply_gachalegendary,#レジェンダリー
+TwitchAction_GachaBoxLegendaryDesc,Supply 1x GachaBox Legendary,ガチャBOX - レジェンダリーを支給する
+TwitchAction_GachaBoxHeroic,Gacha Box Heroic,ガチャBOX - ヒロイック
+TwitchAction_GachaBoxHeroicCommand,#supply_gachaheroic,#ヒロイック
+TwitchAction_GachaBoxHeroicDesc,Supply 1x GachaBox Heroic,ガチャBOX - ヒロイックを支給する
+
+TwitchAction_GachaBoxT1,Gacha Box Tier1,ガチャBOX - ティア1
+TwitchAction_GachaBoxT1Command,#supply_gacha1,#ガチャ1
+TwitchAction_GachaBoxT1Desc,Supply 1x GachaBox Tier1,ガチャBOX - ティア1グループからランダムで1箱支給する
+TwitchAction_GachaBoxT2,Gacha Box Tier2,ガチャBOX - ティア2
+TwitchAction_GachaBoxT2Command,#supply_gacha2,#ガチャ2
+TwitchAction_GachaBoxT2Desc,Supply 1x GachaBox Tier2,ガチャBOX - ティア2グループからランダムで1箱支給する
+TwitchAction_GachaBoxT3,Gacha Box Tier3,ガチャBOX - ティア3
+TwitchAction_GachaBoxT3Command,#supply_gacha3,#ガチャ3
+TwitchAction_GachaBoxT3Desc,Supply 1x GachaBox Tier3,ガチャBOX - ティア3グループからランダムで1箱支給する
+TwitchAction_GachaBoxT4,Gacha Box Tier4,ガチャBOX - ティア4
+TwitchAction_GachaBoxT4Command,#supply_gacha4,#ガチャ4
+TwitchAction_GachaBoxT4Desc,Supply 1x GachaBox Tier4,ガチャBOX - ティア4グループからランダムで1箱支給する
+TwitchAction_GachaBoxT5,Gacha Box Tier5,ガチャBOX - ティア5
+TwitchAction_GachaBoxT5Command,#supply_gacha5,#ガチャ5
+TwitchAction_GachaBoxT5Desc,Supply 1x GachaBox Tier5,ガチャBOX - ティア5グループからランダムで1箱支給する
+TwitchAction_GachaBoxT6,Gacha Box Tier6,ガチャBOX - ティア6
+TwitchAction_GachaBoxT6Command,#supply_gacha6,#ガチャ6
+TwitchAction_GachaBoxT6Desc,Supply 1x GachaBox Tier6,ガチャBOX - ティア6グループからランダムで1箱支給する
+TwitchAction_GachaBoxAll,Free Gacha Box,ガチャBOX - フリー
+TwitchAction_GachaBoxAllCommand,#supply_gachabox,#ガチャボックス
+TwitchAction_GachaBoxAllDesc,Supply 1x GachaBox free,1日1回ガチャBOXを1~3種類無償で支給する
+
+zombieScreamerTwitch,Zombie Screamer Twitch,絶叫ゾンビ改
+zombieScreamerFeralTwitch,Zombie Screamer Feral Twitch,残忍絶叫ゾンビ改
+zombieScreamerRadiatedTwitch,Zombie Screamer Radiated Twitch,汚染絶叫ゾンビ改
+DFNightStalkerTwitch,Night  StalkerTwitch,ナイトストーカー改
+DFNightStalkerBossTwitch,Night Stalker Boss Twitch,ナイトストーカーボス改
+DFzombieTitanTwitch,Titan Twitch,タイタン改
+DFzombieTitanRadiatedTwitch,Titan Radiated Twitch,汚染タイタン改
+DFzombieBehemothTwitch,Behemoth Twitch,ベヒモス改
+DFzombieBehemothRadiatedTwitch,Behemoth Radiated Twitch,汚染ベヒモス改
+zombieBehemothFemaleTwitch,Behemoth Female Twitch,ベヒモス改
+zombieBehemothRadiatedFemaleTwitch,Behemoth Radiated Female Twitch,汚染ベヒモス改
+DemonBehemothTwitch,Demon Behemoth Twitch,デモニックベヒモス改
+zombieBusinessWomanDemonTwitch,Business Woman Demon Twitch,デモニックゾンビ改
+zombieCheerleaderDemonTwitch,Cheerleader Demon Twitch,デモニックゾンビ改
+zombieOldTimerDemonTwitch,OldTimer Demon Twitch,デモニックゾンビ改
+zombieWightDemonTwitch,Wight Demon Twitch,デモニックゾンビ改
+zombieBoeDemonTwitch,Boe Demon Twitch,デモニックゾンビ改
+zombieFemaleFatDemonTwitch,Female Fat Demon Twitch,デモニックゾンビ改
+zombieJoeDemonTwitch,Joe Demon Twitch,デモニックゾンビ改
+zombieMoeDemonTwitch,Moe Demon Twitch,デモニックゾンビ改
+zombieArleneDemonTwitch,Arlene Demon Twitch,デモニックゾンビ改
+zombieLabDemonTwitch,Lab Demon Twitch,デモニックゾンビ改
+zombieDarleneDemonTwitch,Darlene Demon Twitch,デモニックゾンビ改
+zombieMarleneDemonTwitch,Marlene Demon Twitch,デモニックゾンビ改
+zombieYoDemonTwitch,Yo Demon Twitch,デモニックゾンビ改
+zombieSteveDemonTwitch,Steve Demon Twitch,デモニックゾンビ改
+zombieBusinessManDemonTwitch,BusinessMan Demon Twitch,デモニックゾンビ改
+zombieSpiderDemonTwitch,Spider Demon Twitch,デモニックゾンビ改
+zombieNurseDemonTwitch,Nurse Demon Twitch,デモニックゾンビ改
+zombieFatHawaiianDemonTwitch,FatHawaiian Demon Twitch,デモニックゾンビ改
+zombieFatCopDemonTwitch,FatCop Demon Twitch,デモニックゾンビ改
+zombieMaleHazmatDemonTwitch,Male Hazmat Demon Twitch,デモニックゾンビ改
+zombieUtilityWorkerDemonTwitch,UtilityWorker Demon Twitch,デモニックゾンビ改
+zombieSoldierDemonTwitch,Soldier Demon Twitch,デモニックゾンビ改
+zombieSkateboarderDemonTwitch,Skateboarder Demon Twitch,デモニックゾンビ改
+zombieJanitorDemonTwitch,Janitor Demon Twitch,デモニックゾンビ改
+zombieBikerDemonTwitch,Biker Demon Twitch,デモニックゾンビ改
+zombiePartyGirlDemonTwitch,PartyGirl Demon Twitch,デモニックゾンビ改
+SuccubusTwitch,Succubus Twitch,サキュバス改
+IncubusTwitch,Incubus Twitch,インキュバス改
+
+cntShippingCrateJunk,Gacha Box - [9C8867]Junk[-],ガチャBOX - [9C8867]ジャンク[-]
+cntShippingCrateCommon,Gacha Box - [CF7F29]Common[-],ガチャBOX - [CF7F29]コモン[-]
+cntShippingCrateUncommon,Gacha Box - [A2A41B]Uncommon[-],ガチャBOX - [A2A41B]アンコモン[-]
+cntShippingCrateRare,Gacha Box - [42C234]Rare[-],ガチャBOX - [42C234]レア[-]
+cntShippingCrateEpic,Gacha Box - [315DCE]Epic[-],ガチャBOX - [315DCE]エピック[-]
+cntShippingCrateLegendary,Gacha Box - [A42ACC]Legendary[-],ガチャBOX - [A42ACC]レジェンダリー[-]
+cntShippingCrateHeroic,Gacha Box - [660066]Heroic[-],ガチャBOX - [660066]ヒロイック[-]
+cntLootCrateJunk,Gacha Box - [9C8867]Junk[-],ガチャBOX - [9C8867]ジャンク[-]
+cntLootCrateCommon,Gacha Box - [CF7F29]Common[-],ガチャBOX - [CF7F29]コモン[-]
+cntLootCrateUncommon,Gacha Box - [A2A41B]Uncommon[-],ガチャBOX - [A2A41B]アンコモン[-]
+cntLootCrateRare,Gacha Box - [42C234]Rare[-],ガチャBOX - [42C234]レア[-]
+cntLootCrateEpic,Gacha Box - [315DCE]Epic[-],ガチャBOX - [315DCE]エピック[-]
+cntLootCrateLegendary,Gacha Box - [A42ACC]Legendary[-],ガチャBOX - [A42ACC]レジェンダリー[-]
+cntLootCrateHeroic,Gacha Box - [660066]Heroic[-],ガチャBOX - [660066]ヒロイック[-]
+cntShippingCrateJunkDesc,A box containing the specified items at random.\nRarity Rank1/7,指定されたアイテムがランダムに入っているボックスで、主に報酬等で入手できます。\nレア度ランク1/7
+cntShippingCrateCommonDesc,A box containing the specified items at random.\nRarity Rank2/7,指定されたアイテムがランダムに入っているボックスで、主に報酬等で入手できます。\nレア度ランク2/7
+cntShippingCrateUncommonDesc,A box containing the specified items at random.\nRarity Rank3/7,指定されたアイテムがランダムに入っているボックスで、主に報酬等で入手できます。\nレア度ランク3/7
+cntShippingCrateRareDesc,A box containing the specified items at random.\nRarity Rank4/7,指定されたアイテムがランダムに入っているボックスで、主に報酬等で入手できます。\nレア度ランク4/7
+cntShippingCrateEpicDesc,A box containing the specified items at random.\nRarity Rank5/7,指定されたアイテムがランダムに入っているボックスで、主に報酬等で入手できます。\nレア度ランク5/7
+cntShippingCrateLegendaryDesc,A box containing the specified items at random.\nRarity Rank6/7,指定されたアイテムがランダムに入っているボックスで、主に報酬等で入手できます。\nレア度ランク6/7
+cntShippingCrateHeroicDesc,A box containing the specified items at random.\nRarity Rank7/7,指定されたアイテムがランダムに入っているボックスで、主に報酬等で入手できます。\nレア度ランク7/7
+
+DFFemaleSurvivor5Club,Survivor Twitch生存者改
+DFFemaleSurvivor5Bat,Survivor Twitch生存者改
+DFFemaleSurvivor5BatBarbed,Survivor Twitch生存者改
+DFFemaleSurvivor5BatChain,Survivor Twitch生存者改
+DFFemaleSurvivor5Knife,Survivor Twitch生存者改
+DFFemaleSurvivor5Machete,Survivor Twitch生存者改
+DFFemaleSurvivor6Club,Survivor Twitch生存者改
+DFFemaleSurvivor6Bat,Survivor Twitch生存者改
+DFFemaleSurvivor6BatBarbed,Survivor Twitch生存者改
+DFFemaleSurvivor6BatChain,Survivor Twitch生存者改
+DFFemaleSurvivor6Knife,Survivor Twitch生存者改
+DFFemaleSurvivor6Machete,Survivor Twitch生存者改
+DFFemaleSurvivor7Club,Survivor Twitch生存者改
+DFFemaleSurvivor7Bat,Survivor Twitch生存者改
+DFFemaleSurvivor7BatBarbed,Survivor Twitch生存者改
+DFFemaleSurvivor7BatChain,Survivor Twitch生存者改
+DFFemaleSurvivor7Knife,Survivor Twitch生存者改
+DFFemaleSurvivor7Machete,Survivor Twitch生存者改
+DFFemaleSurvivor8Club,Survivor Twitch生存者改
+DFFemaleSurvivor8Bat,Survivor Twitch生存者改
+DFFemaleSurvivor8BatBarbed,Survivor Twitch生存者改
+DFFemaleSurvivor8BatChain,Survivor Twitch生存者改
+DFFemaleSurvivor8Knife,Survivor Twitch生存者改
+DFFemaleSurvivor8Machete,Survivor Twitch生存者改
+DFMaleSurvivor5Club,Survivor Twitch生存者改
+DFMaleSurvivor5Bat,Survivor Twitch生存者改
+DFMaleSurvivor5BatBarbed,Survivor Twitch生存者改
+DFMaleSurvivor5BatChain,Survivor Twitch生存者改
+DFMaleSurvivor5Knife,Survivor Twitch生存者改
+DFMaleSurvivor5Machete,Survivor Twitch生存者改
+DFMaleSurvivor6Club,Survivor Twitch生存者改
+DFMaleSurvivor6Bat,Survivor Twitch生存者改
+DFMaleSurvivor6BatBarbed,Survivor Twitch生存者改
+DFMaleSurvivor6BatChain,Survivor Twitch生存者改
+DFMaleSurvivor6Knife,Survivor Twitch生存者改
+DFMaleSurvivor6Machete,Survivor Twitch生存者改
+DFMaleSurvivor7Club,Survivor Twitch生存者改
+DFMaleSurvivor7Bat,Survivor Twitch生存者改
+DFMaleSurvivor7BatBarbed,Survivor Twitch生存者改
+DFMaleSurvivor7BatChain,Survivor Twitch生存者改
+DFMaleSurvivor7Knife,Survivor Twitch生存者改
+DFMaleSurvivor7Machete,Survivor Twitch生存者改
+DFMaleSurvivor8Club,Survivor Twitch生存者改
+DFMaleSurvivor8Bat,Survivor Twitch生存者改
+DFMaleSurvivor8BatBarbed,Survivor Twitch生存者改
+DFMaleSurvivor8BatChain,Survivor Twitch生存者改
+DFMaleSurvivor8Knife,Survivor Twitch生存者改
+DFMaleSurvivor8Machete,Survivor Twitch生存者改
+
+TwitchAction_spawnscarecrow,Scarecrow Gr,かかしGr
+TwitchAction_spawnscarecrowCommand,#spawn_scarecrow,#かかし
+TwitchAction_spawnscarecrowDesc,Spawn scarecrow as your allies. Please remember they will not be attacked or moved. ,おなじみのキャラクターを味方としてスポーンさせます。ただし全く身動きしませんので、スポーンさせるタイミングが重要です。
+
+TurretHank,Hank(Scarecrow),ハンク(かかし)
+TurretEmma,Emma(Scarecrow),エマにエル(かかし)
+TurretMiguel,Miguel(Scarecrow),ミゲル(かかし)
+TurretGabrielle,Gabrielle(Scarecrow),ガブリエル(かかし)
+TurretAiden,Aiden(Scarecrow),エイデン(かかし)
+TurretGrace,Grace(Scarecrow),グレース(かかし)
+TurretJeff,Jeff(Scarecrow),ジェフ(かかし)
+TurretCharlotte,Charlotte(Scarecrow),シャーロット(かかし)
+TurretWillie,Willie(Scarecrow),ウィリー(かかし)
+TurretHelen,Helen(Scarecrow),ヘレン(かかし)
+TurretVince,Vince(Scarecrow),ヴィンセント(かかし)
+TurretMaria,Maria(Scarecrow),マリア(かかし)
+TurretRayah,Rayah(Scarecrow),ラヤ(かかし)
+TurretChang,Chang(Scarecrow),チャン(かかし)
+TurretJack,Jack(Scarecrow),ジャック(かかし)
+TurretClint,Clint(Scarecrow),クリント(かかし)
+TurretMadmole,Madmole(Scarecrow),マドモール(かかし)
+TurretRichie,Richie(Scarecrow),リッチー(かかし)
+TurretRoxy,Roxy(Scarecrow),ロキシー(かかし)
+
+middleTreasureDesc,You could get 1 Skill Point additioal rewards when completed this quest.,より高難易度のトレジャークエストです。報酬はスキルポイント+1です。クエスト終了後に付与される、修了証明は実績解除のため必ず読んで下さい。
+advancedTreasureDesc,You could get 1 Skill Point additioal rewards when completed this quest.,さらに高難易度のトレジャークエストです。報酬はスキルポイント+3です。クエスト終了後に付与される、修了証明は実績解除のため必ず読んで下さい。
+qt_middle_taylor,Taylor's Treasure Map - [315DCE]Epic[-],テイラーの宝の地図 - [315DCE]エピック[-]
+qt_middle_nickole,Nickole's Treasure Map - [315DCE]Epic[-],ニコールの宝の地図 - [315DCE]エピック[-]
+qt_middle_stephan,Stephan's Treasure Map - [315DCE]Epic[-],スティーブンの宝の地図 - [315DCE]エピック[-]
+qt_middle_jennifer,Jennifer's Treasure Map - [315DCE]Epic[-],ジェニファーの宝の地図 - [315DCE]エピック[-]
+qt_middle_claude,Claude's Treasure Map - [315DCE]Epic[-],クロードの宝の地図 - [315DCE]エピック[-]
+qt_middle_sarah,Sarah's Treasure Map - [315DCE]Epic[-],サラの宝の地図 - [315DCE]エピック[-]
+qt_middle_raphael,Raphael's Treasure Map - [315DCE]Epic[-],ラファエルの宝の地図 - [315DCE]エピック[-]
+qt_advanced_taylor,Taylor's Treasure Map - [A42ACC]Legendary[-],テイラーの宝の地図 - [A42ACC]レジェンダリー[-]
+qt_advanced_nickole,Nickole's Treasure Map - [A42ACC]Legendary[-],ニコールの宝の地図 - [A42ACC]レジェンダリー[-]
+qt_advanced_stephan,Stephan's Treasure Map - [A42ACC]Legendary[-],スティーブンの宝の地図 - [A42ACC]レジェンダリー[-]
+qt_advanced_jennifer,Jennifer's Treasure Map - [A42ACC]Legendary[-],ジェニファーの宝の地図 - [A42ACC]レジェンダリー[-]
+qt_advanced_claude,Claude's Treasure Map - [A42ACC]Legendary[-],クロードの宝の地図 - [A42ACC]レジェンダリー[-]
+qt_advanced_sarah,Sarah's Treasure Map - [A42ACC]Legendary[-],サラの宝の地図 - [A42ACC]レジェンダリー[-]
+qt_advanced_raphael,Raphael's Treasure Map - [A42ACC]Legendary[-],ラファエルの宝の地図 - [A42ACC]レジェンダリー[-]
+
+certificationDesc,the proreesion should be unlocked When you read this document.,読了することで、クエスト実績が解除されます。
+middle_Quest_Treasure_01_certification,Taylor's Treasure Map - [315DCE]Epic[-] Certificate of Completion,テイラーの宝の地図 - [315DCE]エピック[-] 修了証明
+middle_Quest_Treasure_02_certification,Nickole's Treasure Map - [315DCE]Epic[-] Certificate of Completion,ニコールの宝の地図 - [315DCE]エピック[-] 修了証明
+middle_Quest_Treasure_03_certification,Stephan's Treasure Map - [315DCE]Epic[-] Certificate of Completion,スティーブンの宝の地図 - [315DCE]エピック[-] 修了証明
+middle_Quest_Treasure_04_certification,Jennifer's Treasure Map - [315DCE]Epic[-] Certificate of Completion,ジェニファーの宝の地図 - [315DCE]エピック[-] 修了証明
+middle_Quest_Treasure_05_certification,Claude's Treasure Map - [315DCE]Epic[-] Certificate of Completion,クロードの宝の地図 - [315DCE]エピック[-] 修了証明
+middle_Quest_Treasure_06_certification,Sarah's Treasure Map - [315DCE]Epic[-] Certificate of Completion,サラの宝の地図 - [315DCE]エピック[-] 修了証明
+middle_Quest_Treasure_07_certification,Raphael's Treasure Map - [315DCE]Epic[-] Certificate of Completion,ラファエルの宝の地図 - [315DCE]エピック[-] 修了証明
+advanced_Quest_Treasure_01_certification,Taylor's Treasure Map - [A42ACC]Legendary[-] Certificate of Completion,テイラーの宝の地図 - [A42ACC]レジェンダリー[-] 修了証明
+advanced_Quest_Treasure_02_certification,Nickole's Treasure Map - [A42ACC]Legendary[-] Certificate of Completion,ニコールの宝の地図 - [A42ACC]レジェンダリー[-] 修了証明
+advanced_Quest_Treasure_03_certification,Stephan's Treasure Map - [A42ACC]Legendary[-] Certificate of Completion,スティーブンの宝の地図 - [A42ACC]レジェンダリー[-] 修了証明
+advanced_Quest_Treasure_04_certification,Jennifer's Treasure Map - [A42ACC]Legendary[-] Certificate of Completion,ジェニファーの宝の地図 - [A42ACC]レジェンダリー[-] 修了証明
+advanced_Quest_Treasure_05_certification,Claude's Treasure Map - [A42ACC]Legendary[-] Certificate of Completion,クロードの宝の地図 - [A42ACC]レジェンダリー[-] 修了証明
+advanced_Quest_Treasure_06_certification,Sarah's Treasure Map - [A42ACC]Legendary[-] Certificate of Completion,サラの宝の地図 - [A42ACC]レジェンダリー[-] 修了証明
+advanced_Quest_Treasure_07_certification,Raphael's Treasure Map - [A42ACC]Legendary[-] Certificate of Completion,ラファエルの宝の地図 - [A42ACC]レジェンダリー[-] 修了証明
+
+cntBuriedLootStashChest_middle,blocks,Treasure Cache - [315DCE]Epic[-],宝物の貯蔵庫 - [315DCE]エピック[-]
+cntBuriedLootStashChest_middleInsecure,blocks,Treasure Cache - [315DCE]Epic[-],宝物の貯蔵庫 - [315DCE]エピック[-]
+cntBuriedLootStashChest_advanced,blocks,Treasure Cache - [A42ACC]Legendary[-],宝物の貯蔵庫 - [A42ACC]レジェンダリー[-]
+cntBuriedLootStashChest_advancedInsecure,blocks,Treasure Cache - [A42ACC]Legendary[-],宝物の貯蔵庫 - [A42ACC]レジェンダリー[-]
+
+MiddleQuestTreasureName,progression,トレジャークエスト(中級)
+MiddleQuestTreasureDesc,progression,トレジャークエスト(中級)
+MiddleQuestTreasureLongDesc,progression,トレジャークエスト(中級)
+AdvancedQuestTreasureName,progression,トレジャークエスト(上級)
+AdvancedQuestTreasureDesc,progression,トレジャークエスト(上級)
+AdvancedQuestTreasureLongDesc,progression,トレジャークエスト(上級)
+
+middle_Quest_Treasure_01,progression,Taylor's Treasure Map,トレジャークエスト・テイラー
+middle_Quest_Treasure_02,progression,Nickole's Treasure Map,トレジャークエスト・ニコール
+middle_Quest_Treasure_03,progression,Stephan's Treasure Map,トレジャークエスト・スティーブン
+middle_Quest_Treasure_04,progression,Jennifer's Treasure Map,トレジャークエスト・ジェニファー
+middle_Quest_Treasure_05,progression,Claude's Treasure Map,トレジャークエスト・クロード
+middle_Quest_Treasure_06,progression,Sarah's Treasure Map,トレジャークエスト・サラ
+middle_Quest_Treasure_07,progression,Raphael's Treasure Map,トレジャークエスト・ラファエル
+middle_Quest_Treasure_01Desc,progression,Taylor's Treasure Map,トレジャークエスト・テイラー
+middle_Quest_Treasure_02Desc,progression,Nickole's Treasure Map,トレジャークエスト・ニコール
+middle_Quest_Treasure_03Desc,progression,Stephan's Treasure Map,トレジャークエスト・スティーブン
+middle_Quest_Treasure_04Desc,progression,Jennifer's Treasure Map,トレジャークエスト・ジェニファー
+middle_Quest_Treasure_05Desc,progression,Claude's Treasure Map,トレジャークエスト・クロード
+middle_Quest_Treasure_06Desc,progression,Sarah's Treasure Map,トレジャークエスト・サラ
+middle_Quest_Treasure_07Desc,progression,Raphael's Treasure Map,トレジャークエスト・ラファエル
+middle_Quest_TreasureComplete,progression,Complete Middle Treasure Quest,トレジャークエスト修了(中級)
+middle_Quest_TreasureCompleteDesc,progression,Complete Middle Treasure Quest,トレジャークエスト修了(中級)
+middle_Quest_TreasureCompleteLongDesc,progression,Complete Middle Treasure Quest,トレジャークエスト修了(中級)
+
+advanced_Quest_Treasure_01,progression,Taylor's Treasure Map,トレジャークエスト・テイラー
+advanced_Quest_Treasure_02,progression,Nickole's Treasure Map,トレジャークエスト・ニコール
+advanced_Quest_Treasure_03,progression,Stephan's Treasure Map,トレジャークエスト・スティーブン
+advanced_Quest_Treasure_04,progression,Jennifer's Treasure Map,トレジャークエスト・ジェニファー
+advanced_Quest_Treasure_05,progression,Claude's Treasure Map,トレジャークエスト・クロード
+advanced_Quest_Treasure_06,progression,Sarah's Treasure Map,トレジャークエスト・サラ
+advanced_Quest_Treasure_07,progression,Raphael's Treasure Map,トレジャークエスト・ラファエル
+advanced_Quest_Treasure_01Desc,progression,Taylor's Treasure Map,トレジャークエスト・テイラー
+advanced_Quest_Treasure_02Desc,progression,Nickole's Treasure Map,トレジャークエスト・ニコール
+advanced_Quest_Treasure_03Desc,progression,Stephan's Treasure Map,トレジャークエスト・スティーブン
+advanced_Quest_Treasure_04Desc,progression,Jennifer's Treasure Map,トレジャークエスト・ジェニファー
+advanced_Quest_Treasure_05Desc,progression,Claude's Treasure Map,トレジャークエスト・クロード
+advanced_Quest_Treasure_06Desc,progression,Sarah's Treasure Map,トレジャークエスト・サラ
+advanced_Quest_Treasure_07Desc,progression,Raphael's Treasure Map,トレジャークエスト・ラファエル
+advanced_Quest_TreasureComplete,progression,Complete Advanced Treasure Quest,トレジャークエスト修了(上級)
+advanced_Quest_TreasureCompleteDesc,progression,Complete Advanced Treasure Quest,トレジャークエスト修了(上級)
+advanced_Quest_TreasureCompleteLongDesc,progression,Complete Advanced Treasure Quest,トレジャークエスト修了(上級)
+

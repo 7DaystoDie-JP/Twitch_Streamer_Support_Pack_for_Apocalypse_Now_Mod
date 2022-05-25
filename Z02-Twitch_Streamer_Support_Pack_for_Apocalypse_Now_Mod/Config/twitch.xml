@@ -1,0 +1,175 @@
+<configs>
+    <!-- <set xpath="/twitch/random_group[@name='spawn_tough']/@random_count">8</set>
+  <set xpath="/twitch/random_group[@name='spawn_animal']/@random_count">8</set> -->
+    <InsertAfter xpath="/twitch/category[@name='Debuffs']">
+        <category name="DF" display_name="TwitchActionCategory_DF" icon="ui_game_symbol_near_death_trauma" />
+    </InsertAfter>
+    <append xpath="/twitch/action[starts-with(@name,'twitch_tourist')]">
+        <property name="command_key" value="TwitchAction_SpawnTouristCommand" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_mutatedFeral']">
+        <property name="command_key" value="TwitchAction_SpawnMutatedCommand" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_mutatedRad']">
+        <property name="command_key" value="TwitchAction_SpawnMutatedCommand" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_mod_tpbackpack']">
+        <property name="command_key" value="TwitchAction_TeleportToBackpackCommand" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_RadDog']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_arachnid']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_cow']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_beefdog']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_hornet']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_mutantspider']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_hellwolf']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_mutatedfootballer']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_mutatedsoldier']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_wightdemon']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_labdemon']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_nightstalker']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_behemoth']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_titan']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_succubus']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch/action[@name='twitch_scarecrow']">
+        <property name="category" value="DF" />
+    </append>
+    <append xpath="/twitch">
+        <!-- Zombie Spawns -->
+        <action name="twitch_MiniHorde1" extends="twitch_normalZombie">
+            <property name="command" value="#mini_horde1" />
+            <property name="command_key" value="TwitchAction_MiniHorde1Command" />
+            <property name="title_key" value="TwitchAction_MiniHorde1" />
+            <property name="description_key" value="TwitchAction_MiniHorde1Desc" />
+            <property name="start_gamestage" value="0" />
+            <property name="event_name" value="spawn_MiniHorde1" />
+            <property name="default_cost" value="100" />
+            <!-- <property name="random_group" value="df_only" /> -->
+            <property name="category" value="DF" />
+            <property name="cooldown" value="1800" />
+        </action>
+        <!-- Zombie Spawns -->
+        <action name="twitch_MiniHorde2" extends="twitch_normalZombie">
+            <property name="command" value="#mini_horde2" />
+            <property name="command_key" value="TwitchAction_MiniHorde2Command" />
+            <property name="title_key" value="TwitchAction_MiniHorde2" />
+            <property name="description_key" value="TwitchAction_MiniHorde2Desc" />
+            <property name="start_gamestage" value="100" />
+            <property name="event_name" value="spawn_MiniHorde2" />
+            <property name="default_cost" value="100" />
+            <!-- <property name="random_group" value="df_only" /> -->
+            <property name="category" value="DF" />
+            <property name="cooldown" value="1800" />
+            <property name="enabled" value="false" />
+        </action>
+        <action name="twitch_MiniHorde3" extends="twitch_normalZombie">
+            <property name="command" value="#mini_horde3" />
+            <property name="command_key" value="TwitchAction_MiniHorde3Command" />
+            <property name="title_key" value="TwitchAction_MiniHorde3" />
+            <property name="description_key" value="TwitchAction_MiniHorde3Desc" />
+            <property name="start_gamestage" value="300" />
+            <property name="event_name" value="spawn_MiniHorde3" />
+            <property name="default_cost" value="100" />
+            <!-- <property name="random_group" value="df_only" /> -->
+            <property name="category" value="DF" />
+            <property name="cooldown" value="1800" />
+            <property name="enabled" value="false" />
+        </action>
+        <action name="twitch_MiniHorde4" extends="twitch_normalZombie">
+            <property name="command" value="#mini_horde4" />
+            <property name="command_key" value="TwitchAction_MiniHorde4Command" />
+            <property name="title_key" value="TwitchAction_MiniHorde4" />
+            <property name="description_key" value="TwitchAction_MiniHorde4Desc" />
+            <property name="start_gamestage" value="500" />
+            <property name="event_name" value="spawn_MiniHorde4" />
+            <property name="default_cost" value="100" />
+            <!-- <property name="random_group" value="df_only" /> -->
+            <property name="category" value="DF" />
+            <property name="cooldown" value="1800" />
+            <property name="enabled" value="false" />
+        </action>
+        <action name="twitch_MiniHorde5" extends="twitch_normalZombie">
+            <property name="command" value="#mini_horde5" />
+            <property name="command_key" value="TwitchAction_MiniHorde5Command" />
+            <property name="title_key" value="TwitchAction_MiniHorde5" />
+            <property name="description_key" value="TwitchAction_MiniHorde5Desc" />
+            <property name="start_gamestage" value="500" />
+            <property name="event_name" value="spawn_MiniHorde5" />
+            <property name="default_cost" value="100" />
+            <!-- <property name="random_group" value="df_only" /> -->
+            <property name="category" value="DF" />
+            <property name="cooldown" value="1800" />
+            <property name="enabled" value="false" />
+        </action>
+        <action name="twitch_MiniHorde6" extends="twitch_normalZombie">
+            <property name="command" value="#mini_horde6" />
+            <property name="command_key" value="TwitchAction_MiniHorde6Command" />
+            <property name="title_key" value="TwitchAction_MiniHorde6" />
+            <property name="description_key" value="TwitchAction_MiniHorde6Desc" />
+            <property name="start_gamestage" value="500" />
+            <property name="event_name" value="spawn_MiniHorde6" />
+            <property name="default_cost" value="100" />
+            <!-- <property name="random_group" value="df_only" /> -->
+            <property name="category" value="DF" />
+            <property name="cooldown" value="1800" />
+            <property name="special_only" value="false" />
+            <property name="enabled" value="false" />
+        </action>
+        <action name="twitch_DFSurvivorGr" extends="twitch_normalZombie">
+            <property name="command" value="#spawn_survivor" />
+            <property name="command_key" value="TwitchAction_SpawnSurvivorCommand" />
+            <property name="title_key" value="TwitchAction_SpawnSurvivor" />
+            <property name="description_key" value="TwitchAction_SpawnSurvivorDesc" />
+            <property name="start_gamestage" value="0" />
+            <property name="event_name" value="spawn_survivorGr" />
+            <property name="default_cost" value="100" />
+            <!-- <property name="random_group" value="df_only" /> -->
+            <property name="is_positive" value="true" />
+            <property name="category" value="DF" />
+            <property name="cooldown" value="300" />
+        </action>
+        <action name="twitch_gachaall" extends="twitch_spawnWeapon1">
+            <property name="command" value="#supply_gachabox" />
+            <property name="command_key" value="TwitchAction_GachaBoxAllCommand" />
+            <property name="title_key" value="TwitchAction_GachaBoxAll" />
+            <property name="description_key" value="TwitchAction_GachaBoxAllDesc" />
+            <property name="start_gamestage" value="0" />
+            <property name="event_name" value="spawn_gachaall" />
+            <property name="default_cost" value="0" />
+            <property name="cooldown" value="0" />
+            <property name="category" value="DF" />
+            <property name="is_positive" value="true" />
+            <property name="single_day" value="true" />
+        </action>
+    </append>
+</configs>

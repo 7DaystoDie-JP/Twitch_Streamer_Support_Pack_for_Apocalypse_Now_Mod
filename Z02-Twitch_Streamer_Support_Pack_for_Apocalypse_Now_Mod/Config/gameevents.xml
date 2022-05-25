@@ -1,0 +1,733 @@
+<configs>
+    <!-- Zombie Spawns -->
+    <append xpath="/gameevents">
+        <action_sequence name="spawn_MiniHorde1">
+            <property name="allow_user_trigger" value="false" />
+            <property name="category" value="twitch_actions" />
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieScreamerTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" param1="spawncount" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="0" param1="gamestage1" />
+                </requirement>
+                <property name="phase" value="1" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="100" param1="gamestage2" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieScreamerTwitch,zombieScreamerFeralTwitch" param1="zombiename" />
+                <property name="spawn_count" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="100" param1="gamestage2" />
+                </requirement>
+                <property name="phase" value="3" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="4" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="200" param1="gamestage3" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFMaleSurvivor5Club,DFMaleSurvivor5Bat,DFMaleSurvivor5BatBarbed,DFMaleSurvivor5BatChain,DFMaleSurvivor5Knife,DFMaleSurvivor5Machete,DFFemaleSurvivor5Club,DFFemaleSurvivor5Bat,DFFemaleSurvivor5BatBarbed,DFFemaleSurvivor5BatChain,DFFemaleSurvivor5Knife,DFFemaleSurvivor5Machete,DFMaleSurvivor6Club,DFMaleSurvivor6Bat,DFMaleSurvivor6BatBarbed,DFMaleSurvivor6BatChain,DFMaleSurvivor6Knife,DFMaleSurvivor6Machete,DFFemaleSurvivor6Club,DFFemaleSurvivor6Bat,DFFemaleSurvivor6BatBarbed,DFFemaleSurvivor6BatChain,DFFemaleSurvivor6Knife,DFFemaleSurvivor6Machete,DFMaleSurvivor7Club,DFMaleSurvivor7Bat,DFMaleSurvivor7BatBarbed,DFMaleSurvivor7BatChain,DFMaleSurvivor7Knife,DFMaleSurvivor7Machete,DFFemaleSurvivor7Club,DFFemaleSurvivor7Bat,DFFemaleSurvivor7BatBarbed,DFFemaleSurvivor7BatChain,DFFemaleSurvivor7Knife,DFFemaleSurvivor7Machete,DFMaleSurvivor8Club,DFMaleSurvivor8Bat,DFMaleSurvivor8BatBarbed,DFMaleSurvivor8BatChain,DFMaleSurvivor8Knife,DFMaleSurvivor8Machete,DFFemaleSurvivor8Club,DFFemaleSurvivor8Bat,DFFemaleSurvivor8BatBarbed,DFFemaleSurvivor8BatChain,DFFemaleSurvivor8Knife,DFFemaleSurvivor8Machete" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="200" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="4" />
+            </action>
+            <action class="SpawnContainer">
+                <property name="entity_names" value="TwitchAction_SupplyWeapon1,TwitchAction_SupplyWeapon2,TwitchAction_SupplyWeapon3,TwitchAction_SupplyWeapon4,TwitchAction_SupplyUtility1,TwitchAction_SupplyUtility2,TwitchAction_SupplyArmor1,TwitchAction_SupplyArmor2,TwitchAction_SupplyArmor3,TwitchAction_SupplyMods1,TwitchAction_SupplyMods2,TwitchAction_SupplyMods3,TwitchAction_SupplyTool1,TwitchAction_SupplyTool2,TwitchAction_SupplyTool3,TwitchAction_SupplyMedicine1,TwitchAction_SupplyMedicine2,TwitchAction_SupplyMedicine3,TwitchAction_SupplyFoodWater1,TwitchAction_SupplyFoodWater2,TwitchAction_SupplyFoodWater3,TwitchAction_SupplyFoodWater4,TwitchAction_SupplyBooks1,TwitchAction_SupplyBooks2,TwitchAction_SupplyBooks3,TwitchAction_SupplyBicycle,TwitchAction_SupplyMinibike,TwitchAction_SupplyMotorcycle,TwitchAction_Supply4x4,TwitchAction_SupplyResource1,TwitchAction_SupplyResource2,TwitchAction_SupplyResource3,TwitchAction_SupplyResource4,TwitchAction_SupplyElectrical1,TwitchAction_SupplyElectrical2,TwitchAction_SupplyAmmo1,TwitchAction_SupplyAmmo2,TwitchAction_SupplyAmmo3,TwitchAction_SupplyAmmo4,TwitchAction_SupplySpecialAmmo1,TwitchAction_SupplySpecialAmmo2,TwitchAction_SupplyExplosives1,TwitchAction_SupplyExplosives2,TwitchAction_SupplyExplosives3,TwitchAction_SupplyExplosives4,TwitchAction_SupplyRobo1,TwitchAction_SupplyRobo2,TwitchAction_SupplyRobo3" param1="cratename" />
+                <property name="spawn_count" value="1" param1="spawncount" />
+                <property name="min_distance" value="4" />
+                <property name="max_distance" value="8" />
+                <property name="safe_spawn" value="true" />
+                <property name="phase" value="4" />
+                <property name="game_stage" value="200" param1="gamestage3" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieScreamerTwitch,zombieScreamerFeralTwitch,zombieScreamerRadiatedTwitch" param1="zombiename" />
+                <property name="spawn_count" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="200" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="5" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="6" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="300" param1="gamestage4" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieScreamerTwitch,zombieScreamerFeralTwitch,zombieScreamerRadiatedTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="300" param1="gamestage4" />
+                </requirement>
+                <property name="phase" value="7" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="8" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="500" param1="gamestage5" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieScreamerTwitch,zombieScreamerFeralTwitch,zombieScreamerRadiatedTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="500" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+        </action_sequence>
+        <action_sequence name="spawn_MiniHorde2">
+            <property name="allow_user_trigger" value="false" />
+            <property name="category" value="twitch_actions" />
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFNightStalkerTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" param1="spawncount" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="100" param1="gamestage1" />
+                </requirement>
+                <property name="phase" value="1" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="200" param1="gamestage2" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFNightStalkerTwitch" param1="zombiename" />
+                <property name="spawn_count" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="200" param1="gamestage2" />
+                </requirement>
+                <property name="phase" value="3" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="4" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="300" param1="gamestage3" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFMaleSurvivor5Club,DFMaleSurvivor5Bat,DFMaleSurvivor5BatBarbed,DFMaleSurvivor5BatChain,DFMaleSurvivor5Knife,DFMaleSurvivor5Machete,DFFemaleSurvivor5Club,DFFemaleSurvivor5Bat,DFFemaleSurvivor5BatBarbed,DFFemaleSurvivor5BatChain,DFFemaleSurvivor5Knife,DFFemaleSurvivor5Machete,DFMaleSurvivor6Club,DFMaleSurvivor6Bat,DFMaleSurvivor6BatBarbed,DFMaleSurvivor6BatChain,DFMaleSurvivor6Knife,DFMaleSurvivor6Machete,DFFemaleSurvivor6Club,DFFemaleSurvivor6Bat,DFFemaleSurvivor6BatBarbed,DFFemaleSurvivor6BatChain,DFFemaleSurvivor6Knife,DFFemaleSurvivor6Machete,DFMaleSurvivor7Club,DFMaleSurvivor7Bat,DFMaleSurvivor7BatBarbed,DFMaleSurvivor7BatChain,DFMaleSurvivor7Knife,DFMaleSurvivor7Machete,DFFemaleSurvivor7Club,DFFemaleSurvivor7Bat,DFFemaleSurvivor7BatBarbed,DFFemaleSurvivor7BatChain,DFFemaleSurvivor7Knife,DFFemaleSurvivor7Machete,DFMaleSurvivor8Club,DFMaleSurvivor8Bat,DFMaleSurvivor8BatBarbed,DFMaleSurvivor8BatChain,DFMaleSurvivor8Knife,DFMaleSurvivor8Machete,DFFemaleSurvivor8Club,DFFemaleSurvivor8Bat,DFFemaleSurvivor8BatBarbed,DFFemaleSurvivor8BatChain,DFFemaleSurvivor8Knife,DFFemaleSurvivor8Machete" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="300" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="4" />
+            </action>
+            <action class="SpawnContainer">
+                <property name="entity_names" value="TwitchAction_SupplyWeapon1,TwitchAction_SupplyWeapon2,TwitchAction_SupplyWeapon3,TwitchAction_SupplyWeapon4,TwitchAction_SupplyUtility1,TwitchAction_SupplyUtility2,TwitchAction_SupplyArmor1,TwitchAction_SupplyArmor2,TwitchAction_SupplyArmor3,TwitchAction_SupplyMods1,TwitchAction_SupplyMods2,TwitchAction_SupplyMods3,TwitchAction_SupplyTool1,TwitchAction_SupplyTool2,TwitchAction_SupplyTool3,TwitchAction_SupplyMedicine1,TwitchAction_SupplyMedicine2,TwitchAction_SupplyMedicine3,TwitchAction_SupplyFoodWater1,TwitchAction_SupplyFoodWater2,TwitchAction_SupplyFoodWater3,TwitchAction_SupplyFoodWater4,TwitchAction_SupplyBooks1,TwitchAction_SupplyBooks2,TwitchAction_SupplyBooks3,TwitchAction_SupplyBicycle,TwitchAction_SupplyMinibike,TwitchAction_SupplyMotorcycle,TwitchAction_Supply4x4,TwitchAction_SupplyResource1,TwitchAction_SupplyResource2,TwitchAction_SupplyResource3,TwitchAction_SupplyResource4,TwitchAction_SupplyElectrical1,TwitchAction_SupplyElectrical2,TwitchAction_SupplyAmmo1,TwitchAction_SupplyAmmo2,TwitchAction_SupplyAmmo3,TwitchAction_SupplyAmmo4,TwitchAction_SupplySpecialAmmo1,TwitchAction_SupplySpecialAmmo2,TwitchAction_SupplyExplosives1,TwitchAction_SupplyExplosives2,TwitchAction_SupplyExplosives3,TwitchAction_SupplyExplosives4,TwitchAction_SupplyRobo1,TwitchAction_SupplyRobo2,TwitchAction_SupplyRobo3" param1="cratename" />
+                <property name="spawn_count" value="1" param1="spawncount" />
+                <property name="min_distance" value="4" />
+                <property name="max_distance" value="8" />
+                <property name="safe_spawn" value="true" />
+                <property name="phase" value="4" />
+                <property name="game_stage" value="300" param1="gamestage3" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFNightStalkerTwitch,DFNightStalkerBossTwitch" param1="zombiename" />
+                <property name="spawn_count" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="300" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="5" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="6" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="500" param1="gamestage4" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFNightStalkerTwitch,DFNightStalkerBossTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="500" param1="gamestage4" />
+                </requirement>
+                <property name="phase" value="7" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="8" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="800" param1="gamestage5" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFNightStalkerTwitch,DFNightStalkerBossTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="800" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+        </action_sequence>
+        <action_sequence name="spawn_MiniHorde3">
+            <property name="allow_user_trigger" value="false" />
+            <property name="category" value="twitch_actions" />
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" param1="spawncount" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="300" param1="gamestage1" />
+                </requirement>
+                <property name="phase" value="1" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="500" param1="gamestage1" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="500" param1="gamestage2" />
+                </requirement>
+                <property name="phase" value="3" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="4" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="800" param1="gamestage3" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFMaleSurvivor5Club,DFMaleSurvivor5Bat,DFMaleSurvivor5BatBarbed,DFMaleSurvivor5BatChain,DFMaleSurvivor5Knife,DFMaleSurvivor5Machete,DFFemaleSurvivor5Club,DFFemaleSurvivor5Bat,DFFemaleSurvivor5BatBarbed,DFFemaleSurvivor5BatChain,DFFemaleSurvivor5Knife,DFFemaleSurvivor5Machete,DFMaleSurvivor6Club,DFMaleSurvivor6Bat,DFMaleSurvivor6BatBarbed,DFMaleSurvivor6BatChain,DFMaleSurvivor6Knife,DFMaleSurvivor6Machete,DFFemaleSurvivor6Club,DFFemaleSurvivor6Bat,DFFemaleSurvivor6BatBarbed,DFFemaleSurvivor6BatChain,DFFemaleSurvivor6Knife,DFFemaleSurvivor6Machete,DFMaleSurvivor7Club,DFMaleSurvivor7Bat,DFMaleSurvivor7BatBarbed,DFMaleSurvivor7BatChain,DFMaleSurvivor7Knife,DFMaleSurvivor7Machete,DFFemaleSurvivor7Club,DFFemaleSurvivor7Bat,DFFemaleSurvivor7BatBarbed,DFFemaleSurvivor7BatChain,DFFemaleSurvivor7Knife,DFFemaleSurvivor7Machete,DFMaleSurvivor8Club,DFMaleSurvivor8Bat,DFMaleSurvivor8BatBarbed,DFMaleSurvivor8BatChain,DFMaleSurvivor8Knife,DFMaleSurvivor8Machete,DFFemaleSurvivor8Club,DFFemaleSurvivor8Bat,DFFemaleSurvivor8BatBarbed,DFFemaleSurvivor8BatChain,DFFemaleSurvivor8Knife,DFFemaleSurvivor8Machete" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="800" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="4" />
+            </action>
+            <action class="SpawnContainer">
+                <property name="entity_names" value="TwitchAction_SupplyWeapon1,TwitchAction_SupplyWeapon2,TwitchAction_SupplyWeapon3,TwitchAction_SupplyWeapon4,TwitchAction_SupplyUtility1,TwitchAction_SupplyUtility2,TwitchAction_SupplyArmor1,TwitchAction_SupplyArmor2,TwitchAction_SupplyArmor3,TwitchAction_SupplyMods1,TwitchAction_SupplyMods2,TwitchAction_SupplyMods3,TwitchAction_SupplyTool1,TwitchAction_SupplyTool2,TwitchAction_SupplyTool3,TwitchAction_SupplyMedicine1,TwitchAction_SupplyMedicine2,TwitchAction_SupplyMedicine3,TwitchAction_SupplyFoodWater1,TwitchAction_SupplyFoodWater2,TwitchAction_SupplyFoodWater3,TwitchAction_SupplyFoodWater4,TwitchAction_SupplyBooks1,TwitchAction_SupplyBooks2,TwitchAction_SupplyBooks3,TwitchAction_SupplyBicycle,TwitchAction_SupplyMinibike,TwitchAction_SupplyMotorcycle,TwitchAction_Supply4x4,TwitchAction_SupplyResource1,TwitchAction_SupplyResource2,TwitchAction_SupplyResource3,TwitchAction_SupplyResource4,TwitchAction_SupplyElectrical1,TwitchAction_SupplyElectrical2,TwitchAction_SupplyAmmo1,TwitchAction_SupplyAmmo2,TwitchAction_SupplyAmmo3,TwitchAction_SupplyAmmo4,TwitchAction_SupplySpecialAmmo1,TwitchAction_SupplySpecialAmmo2,TwitchAction_SupplyExplosives1,TwitchAction_SupplyExplosives2,TwitchAction_SupplyExplosives3,TwitchAction_SupplyExplosives4,TwitchAction_SupplyRobo1,TwitchAction_SupplyRobo2,TwitchAction_SupplyRobo3" param1="cratename" />
+                <property name="spawn_count" value="1" param1="spawncount" />
+                <property name="min_distance" value="4" />
+                <property name="max_distance" value="8" />
+                <property name="safe_spawn" value="true" />
+                <property name="phase" value="4" />
+                <property name="game_stage" value="800" param1="gamestage3" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="800" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="5" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="6" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage4" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage4" />
+                </requirement>
+                <property name="phase" value="7" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="8" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage5" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DemonPortal" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+        </action_sequence>
+        <action_sequence name="spawn_MiniHorde4">
+            <property name="allow_user_trigger" value="false" />
+            <property name="category" value="twitch_actions" />
+            <action class="SpawnEntity">
+                <property name="entity_names" value="IncubusTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" param1="spawncount" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="500" param1="gamestage1" />
+                </requirement>
+                <property name="phase" value="1" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="800" param1="gamestage2" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="IncubusTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="800" param1="gamestage2" />
+                </requirement>
+                <property name="phase" value="3" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="4" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage3" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFMaleSurvivor5Club,DFMaleSurvivor5Bat,DFMaleSurvivor5BatBarbed,DFMaleSurvivor5BatChain,DFMaleSurvivor5Knife,DFMaleSurvivor5Machete,DFFemaleSurvivor5Club,DFFemaleSurvivor5Bat,DFFemaleSurvivor5BatBarbed,DFFemaleSurvivor5BatChain,DFFemaleSurvivor5Knife,DFFemaleSurvivor5Machete,DFMaleSurvivor6Club,DFMaleSurvivor6Bat,DFMaleSurvivor6BatBarbed,DFMaleSurvivor6BatChain,DFMaleSurvivor6Knife,DFMaleSurvivor6Machete,DFFemaleSurvivor6Club,DFFemaleSurvivor6Bat,DFFemaleSurvivor6BatBarbed,DFFemaleSurvivor6BatChain,DFFemaleSurvivor6Knife,DFFemaleSurvivor6Machete,DFMaleSurvivor7Club,DFMaleSurvivor7Bat,DFMaleSurvivor7BatBarbed,DFMaleSurvivor7BatChain,DFMaleSurvivor7Knife,DFMaleSurvivor7Machete,DFFemaleSurvivor7Club,DFFemaleSurvivor7Bat,DFFemaleSurvivor7BatBarbed,DFFemaleSurvivor7BatChain,DFFemaleSurvivor7Knife,DFFemaleSurvivor7Machete,DFMaleSurvivor8Club,DFMaleSurvivor8Bat,DFMaleSurvivor8BatBarbed,DFMaleSurvivor8BatChain,DFMaleSurvivor8Knife,DFMaleSurvivor8Machete,DFFemaleSurvivor8Club,DFFemaleSurvivor8Bat,DFFemaleSurvivor8BatBarbed,DFFemaleSurvivor8BatChain,DFFemaleSurvivor8Knife,DFFemaleSurvivor8Machete" />
+                <property name="spawn_count" value="3" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="4" />
+            </action>
+            <action class="SpawnContainer">
+                <property name="entity_names" value="TwitchAction_SupplyWeapon1,TwitchAction_SupplyWeapon2,TwitchAction_SupplyWeapon3,TwitchAction_SupplyWeapon4,TwitchAction_SupplyUtility1,TwitchAction_SupplyUtility2,TwitchAction_SupplyArmor1,TwitchAction_SupplyArmor2,TwitchAction_SupplyArmor3,TwitchAction_SupplyMods1,TwitchAction_SupplyMods2,TwitchAction_SupplyMods3,TwitchAction_SupplyTool1,TwitchAction_SupplyTool2,TwitchAction_SupplyTool3,TwitchAction_SupplyMedicine1,TwitchAction_SupplyMedicine2,TwitchAction_SupplyMedicine3,TwitchAction_SupplyFoodWater1,TwitchAction_SupplyFoodWater2,TwitchAction_SupplyFoodWater3,TwitchAction_SupplyFoodWater4,TwitchAction_SupplyBooks1,TwitchAction_SupplyBooks2,TwitchAction_SupplyBooks3,TwitchAction_SupplyBicycle,TwitchAction_SupplyMinibike,TwitchAction_SupplyMotorcycle,TwitchAction_Supply4x4,TwitchAction_SupplyResource1,TwitchAction_SupplyResource2,TwitchAction_SupplyResource3,TwitchAction_SupplyResource4,TwitchAction_SupplyElectrical1,TwitchAction_SupplyElectrical2,TwitchAction_SupplyAmmo1,TwitchAction_SupplyAmmo2,TwitchAction_SupplyAmmo3,TwitchAction_SupplyAmmo4,TwitchAction_SupplySpecialAmmo1,TwitchAction_SupplySpecialAmmo2,TwitchAction_SupplyExplosives1,TwitchAction_SupplyExplosives2,TwitchAction_SupplyExplosives3,TwitchAction_SupplyExplosives4,TwitchAction_SupplyRobo1,TwitchAction_SupplyRobo2,TwitchAction_SupplyRobo3" param1="cratename" />
+                <property name="spawn_count" value="3" param1="spawncount" />
+                <property name="min_distance" value="4" />
+                <property name="max_distance" value="8" />
+                <property name="safe_spawn" value="true" />
+                <property name="phase" value="4" />
+                <property name="game_stage" value="1000" param1="gamestage3" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="IncubusTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="5" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="6" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage4" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="IncubusTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage4" />
+                </requirement>
+                <property name="phase" value="7" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage4" />
+                </requirement>
+                <property name="phase" value="7" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="8" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="IncubusTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DemonPortal" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+        </action_sequence>
+        <action_sequence name="spawn_MiniHorde5">
+            <property name="allow_user_trigger" value="false" />
+            <property name="category" value="twitch_actions" />
+            <action class="SpawnEntity">
+                <property name="entity_names" value="SuccubusTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" param1="spawncount" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="500" param1="gamestage1" />
+                </requirement>
+                <property name="phase" value="1" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="800" param1="gamestage2" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="SuccubusTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="800" param1="gamestage2" />
+                </requirement>
+                <property name="phase" value="3" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="4" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage3" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFMaleSurvivor5Club,DFMaleSurvivor5Bat,DFMaleSurvivor5BatBarbed,DFMaleSurvivor5BatChain,DFMaleSurvivor5Knife,DFMaleSurvivor5Machete,DFFemaleSurvivor5Club,DFFemaleSurvivor5Bat,DFFemaleSurvivor5BatBarbed,DFFemaleSurvivor5BatChain,DFFemaleSurvivor5Knife,DFFemaleSurvivor5Machete,DFMaleSurvivor6Club,DFMaleSurvivor6Bat,DFMaleSurvivor6BatBarbed,DFMaleSurvivor6BatChain,DFMaleSurvivor6Knife,DFMaleSurvivor6Machete,DFFemaleSurvivor6Club,DFFemaleSurvivor6Bat,DFFemaleSurvivor6BatBarbed,DFFemaleSurvivor6BatChain,DFFemaleSurvivor6Knife,DFFemaleSurvivor6Machete,DFMaleSurvivor7Club,DFMaleSurvivor7Bat,DFMaleSurvivor7BatBarbed,DFMaleSurvivor7BatChain,DFMaleSurvivor7Knife,DFMaleSurvivor7Machete,DFFemaleSurvivor7Club,DFFemaleSurvivor7Bat,DFFemaleSurvivor7BatBarbed,DFFemaleSurvivor7BatChain,DFFemaleSurvivor7Knife,DFFemaleSurvivor7Machete,DFMaleSurvivor8Club,DFMaleSurvivor8Bat,DFMaleSurvivor8BatBarbed,DFMaleSurvivor8BatChain,DFMaleSurvivor8Knife,DFMaleSurvivor8Machete,DFFemaleSurvivor8Club,DFFemaleSurvivor8Bat,DFFemaleSurvivor8BatBarbed,DFFemaleSurvivor8BatChain,DFFemaleSurvivor8Knife,DFFemaleSurvivor8Machete" />
+                <property name="spawn_count" value="3" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="4" />
+            </action>
+            <action class="SpawnContainer">
+                <property name="entity_names" value="TwitchAction_SupplyWeapon1,TwitchAction_SupplyWeapon2,TwitchAction_SupplyWeapon3,TwitchAction_SupplyWeapon4,TwitchAction_SupplyUtility1,TwitchAction_SupplyUtility2,TwitchAction_SupplyArmor1,TwitchAction_SupplyArmor2,TwitchAction_SupplyArmor3,TwitchAction_SupplyMods1,TwitchAction_SupplyMods2,TwitchAction_SupplyMods3,TwitchAction_SupplyTool1,TwitchAction_SupplyTool2,TwitchAction_SupplyTool3,TwitchAction_SupplyMedicine1,TwitchAction_SupplyMedicine2,TwitchAction_SupplyMedicine3,TwitchAction_SupplyFoodWater1,TwitchAction_SupplyFoodWater2,TwitchAction_SupplyFoodWater3,TwitchAction_SupplyFoodWater4,TwitchAction_SupplyBooks1,TwitchAction_SupplyBooks2,TwitchAction_SupplyBooks3,TwitchAction_SupplyBicycle,TwitchAction_SupplyMinibike,TwitchAction_SupplyMotorcycle,TwitchAction_Supply4x4,TwitchAction_SupplyResource1,TwitchAction_SupplyResource2,TwitchAction_SupplyResource3,TwitchAction_SupplyResource4,TwitchAction_SupplyElectrical1,TwitchAction_SupplyElectrical2,TwitchAction_SupplyAmmo1,TwitchAction_SupplyAmmo2,TwitchAction_SupplyAmmo3,TwitchAction_SupplyAmmo4,TwitchAction_SupplySpecialAmmo1,TwitchAction_SupplySpecialAmmo2,TwitchAction_SupplyExplosives1,TwitchAction_SupplyExplosives2,TwitchAction_SupplyExplosives3,TwitchAction_SupplyExplosives4,TwitchAction_SupplyRobo1,TwitchAction_SupplyRobo2,TwitchAction_SupplyRobo3" param1="cratename" />
+                <property name="spawn_count" value="3" param1="spawncount" />
+                <property name="min_distance" value="4" />
+                <property name="max_distance" value="8" />
+                <property name="safe_spawn" value="true" />
+                <property name="phase" value="4" />
+                <property name="game_stage" value="1000" param1="gamestage3" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="SuccubusTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="5" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="6" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage4" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="SuccubusTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage4" />
+                </requirement>
+                <property name="phase" value="7" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage4" />
+                </requirement>
+                <property name="phase" value="7" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="8" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="SuccubusTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DemonPortal" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+        </action_sequence>
+        <action_sequence name="spawn_MiniHorde6">
+            <property name="allow_user_trigger" value="false" />
+            <property name="category" value="twitch_actions" />
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFzombieBehemothTwitch,zombieBehemothFemaleTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" param1="spawncount" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="500" param1="gamestage1" />
+                </requirement>
+                <property name="phase" value="1" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="2" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="800" param1="gamestage2" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFzombieBehemothTwitch,zombieBehemothFemaleTwitch,DFzombieBehemothRadiatedTwitch,zombieBehemothRadiatedFemaleTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GT" />
+                    <property name="game_stage" value="800" param1="gamestage2" />
+                </requirement>
+                <property name="phase" value="3" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="4" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage3" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFMaleSurvivor5Club,DFMaleSurvivor5Bat,DFMaleSurvivor5BatBarbed,DFMaleSurvivor5BatChain,DFMaleSurvivor5Knife,DFMaleSurvivor5Machete,DFFemaleSurvivor5Club,DFFemaleSurvivor5Bat,DFFemaleSurvivor5BatBarbed,DFFemaleSurvivor5BatChain,DFFemaleSurvivor5Knife,DFFemaleSurvivor5Machete,DFMaleSurvivor6Club,DFMaleSurvivor6Bat,DFMaleSurvivor6BatBarbed,DFMaleSurvivor6BatChain,DFMaleSurvivor6Knife,DFMaleSurvivor6Machete,DFFemaleSurvivor6Club,DFFemaleSurvivor6Bat,DFFemaleSurvivor6BatBarbed,DFFemaleSurvivor6BatChain,DFFemaleSurvivor6Knife,DFFemaleSurvivor6Machete,DFMaleSurvivor7Club,DFMaleSurvivor7Bat,DFMaleSurvivor7BatBarbed,DFMaleSurvivor7BatChain,DFMaleSurvivor7Knife,DFMaleSurvivor7Machete,DFFemaleSurvivor7Club,DFFemaleSurvivor7Bat,DFFemaleSurvivor7BatBarbed,DFFemaleSurvivor7BatChain,DFFemaleSurvivor7Knife,DFFemaleSurvivor7Machete,DFMaleSurvivor8Club,DFMaleSurvivor8Bat,DFMaleSurvivor8BatBarbed,DFMaleSurvivor8BatChain,DFMaleSurvivor8Knife,DFMaleSurvivor8Machete,DFFemaleSurvivor8Club,DFFemaleSurvivor8Bat,DFFemaleSurvivor8BatBarbed,DFFemaleSurvivor8BatChain,DFFemaleSurvivor8Knife,DFFemaleSurvivor8Machete" />
+                <property name="spawn_count" value="3" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="4" />
+            </action>
+            <action class="SpawnContainer">
+                <property name="entity_names" value="TwitchAction_SupplyWeapon1,TwitchAction_SupplyWeapon2,TwitchAction_SupplyWeapon3,TwitchAction_SupplyWeapon4,TwitchAction_SupplyUtility1,TwitchAction_SupplyUtility2,TwitchAction_SupplyArmor1,TwitchAction_SupplyArmor2,TwitchAction_SupplyArmor3,TwitchAction_SupplyMods1,TwitchAction_SupplyMods2,TwitchAction_SupplyMods3,TwitchAction_SupplyTool1,TwitchAction_SupplyTool2,TwitchAction_SupplyTool3,TwitchAction_SupplyMedicine1,TwitchAction_SupplyMedicine2,TwitchAction_SupplyMedicine3,TwitchAction_SupplyFoodWater1,TwitchAction_SupplyFoodWater2,TwitchAction_SupplyFoodWater3,TwitchAction_SupplyFoodWater4,TwitchAction_SupplyBooks1,TwitchAction_SupplyBooks2,TwitchAction_SupplyBooks3,TwitchAction_SupplyBicycle,TwitchAction_SupplyMinibike,TwitchAction_SupplyMotorcycle,TwitchAction_Supply4x4,TwitchAction_SupplyResource1,TwitchAction_SupplyResource2,TwitchAction_SupplyResource3,TwitchAction_SupplyResource4,TwitchAction_SupplyElectrical1,TwitchAction_SupplyElectrical2,TwitchAction_SupplyAmmo1,TwitchAction_SupplyAmmo2,TwitchAction_SupplyAmmo3,TwitchAction_SupplyAmmo4,TwitchAction_SupplySpecialAmmo1,TwitchAction_SupplySpecialAmmo2,TwitchAction_SupplyExplosives1,TwitchAction_SupplyExplosives2,TwitchAction_SupplyExplosives3,TwitchAction_SupplyExplosives4,TwitchAction_SupplyRobo1,TwitchAction_SupplyRobo2,TwitchAction_SupplyRobo3" param1="cratename" />
+                <property name="spawn_count" value="3" param1="spawncount" />
+                <property name="min_distance" value="4" />
+                <property name="max_distance" value="8" />
+                <property name="safe_spawn" value="true" />
+                <property name="phase" value="4" />
+                <property name="game_stage" value="1000" param1="gamestage3" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFzombieBehemothTwitch,zombieBehemothFemaleTwitch,DFzombieBehemothRadiatedTwitch,zombieBehemothRadiatedFemaleTwitch,DFzombieTitanTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1000" param1="gamestage3" />
+                </requirement>
+                <property name="phase" value="5" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="6" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage4" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFzombieBehemothTwitch,zombieBehemothFemaleTwitch,DFzombieBehemothRadiatedTwitch,zombieBehemothRadiatedFemaleTwitch,DFzombieTitanTwitch,DFzombieTitanRadiatedTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage4" />
+                </requirement>
+                <property name="phase" value="7" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1300" param1="gamestage4" />
+                </requirement>
+                <property name="phase" value="7" />
+            </action>
+            <action class="RandomDelay">
+                <property name="min_time" value="10" />
+                <property name="max_time" value="30" />
+                <property name="phase" value="8" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DFzombieBehemothTwitch,zombieBehemothFemaleTwitch,DFzombieBehemothRadiatedTwitch,zombieBehemothRadiatedFemaleTwitch,DFzombieTitanTwitch,DFzombieTitanRadiatedTwitch,DemonBehemothTwitch" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="DemonPortal" param1="zombiename" />
+                <property name="spawn_count" value="1" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieWightDemonTwitch,zombieBoeDemonTwitch,zombieFemaleFatDemonTwitch,zombieJoeDemonTwitch,zombieMoeDemonTwitch,zombieArleneDemonTwitch,zombieLabDemonTwitch,zombieDarleneDemonTwitch,zombieMarleneDemonTwitch,zombieYoDemonTwitch,zombieSteveDemonTwitch,zombieBusinessManDemonTwitch,zombieSpiderDemonTwitch,zombieNurseDemonTwitch,zombieFatHawaiianDemonTwitch,zombieFatCopDemonTwitch,zombieMaleHazmatDemonTwitch,zombieUtilityWorkerDemonTwitch,zombieSoldierDemonTwitch,zombieSkateboarderDemonTwitch,zombieCheerleaderDemonTwitch,zombieOldTimerDemonTwitch,zombieBikerDemonTwitch,zombieFarmerDemonTwitch,zombieStripperDemonTwitch" param1="zombiename" />
+                <property name="spawn_count" value="5" />
+                <requirement class="Gamestage">
+                    <property name="operation" value="GTE" />
+                    <property name="game_stage" value="1500" param1="gamestage5" />
+                </requirement>
+                <property name="phase" value="9" />
+            </action>
+        </action_sequence>
+        <action_sequence name="spawn_survivorGr" template="spawn_single">
+            <variable name="zombiename" value="DFMaleSurvivor5Club,DFMaleSurvivor5Bat,DFMaleSurvivor5BatBarbed,DFMaleSurvivor5BatChain,DFMaleSurvivor5Knife,DFMaleSurvivor5Machete,DFFemaleSurvivor5Club,DFFemaleSurvivor5Bat,DFFemaleSurvivor5BatBarbed,DFFemaleSurvivor5BatChain,DFFemaleSurvivor5Knife,DFFemaleSurvivor5Machete,DFMaleSurvivor6Club,DFMaleSurvivor6Bat,DFMaleSurvivor6BatBarbed,DFMaleSurvivor6BatChain,DFMaleSurvivor6Knife,DFMaleSurvivor6Machete,DFFemaleSurvivor6Club,DFFemaleSurvivor6Bat,DFFemaleSurvivor6BatBarbed,DFFemaleSurvivor6BatChain,DFFemaleSurvivor6Knife,DFFemaleSurvivor6Machete,DFMaleSurvivor7Club,DFMaleSurvivor7Bat,DFMaleSurvivor7BatBarbed,DFMaleSurvivor7BatChain,DFMaleSurvivor7Knife,DFMaleSurvivor7Machete,DFFemaleSurvivor7Club,DFFemaleSurvivor7Bat,DFFemaleSurvivor7BatBarbed,DFFemaleSurvivor7BatChain,DFFemaleSurvivor7Knife,DFFemaleSurvivor7Machete,DFMaleSurvivor8Club,DFMaleSurvivor8Bat,DFMaleSurvivor8BatBarbed,DFMaleSurvivor8BatChain,DFMaleSurvivor8Knife,DFMaleSurvivor8Machete,DFFemaleSurvivor8Club,DFFemaleSurvivor8Bat,DFFemaleSurvivor8BatBarbed,DFFemaleSurvivor8BatChain,DFFemaleSurvivor8Knife,DFFemaleSurvivor8Machete" />
+            <variable name="alertsound" value="zombieferalalert" />
+        </action_sequence>
+        <action_sequence name="spawn_gachaall">
+            <action class="SpawnContainer">
+                <property name="entity_names" value="TwitchAction_GachaBoxAll" />
+                <property name="min_distance" value="4" />
+                <property name="max_distance" value="8" />
+                <property name="safe_spawn" value="true" />
+            </action>
+            <action class="PlaySound">
+                <property name="sound" value="twitch_good_spawn" />
+                <property name="phase" value="1" />
+            </action>
+            <action class="PlaySound">
+                <property name="sound" value="open_supply_crate" />
+                <property name="phase" value="1" />
+            </action>
+        </action_sequence>
+    </append>
+</configs>

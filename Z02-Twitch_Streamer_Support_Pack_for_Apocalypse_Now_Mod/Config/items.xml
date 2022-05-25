@@ -1,0 +1,12 @@
+<configs>
+	<!-- <append xpath="/items">
+	<item name="TwitchToolsAnnouncement">
+		<property name="Extends" value="blankNoteMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="DescriptionKey" value="TwitchToolsAnnouncementDesc"/>
+		<property name="CustomIcon" value="challengeQuestMaster"/>
+		<property name="PickupJournalEntry" value="TwitchToolsTip" />
+	</item>
+	</append>
+	<append xpath="/items/item[@name='startingItem']//property[@name='Create_item']/@value">,TwitchToolsAnnouncement</append> -->
+</configs>

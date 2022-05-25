@@ -1,0 +1,185 @@
+<config>
+	<append xpath="/entity_classes">
+		<entity_class name="zombieBehemoth" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,walker,feral,behemoth,cp"/>
+			<property name="Prefab" value="NPC"/>
+	        <property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	        <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	        <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	        <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	        <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	        <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+			<property name="SoundSleeperSense" value="sleepersense"/>
+			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+			<property name="Mesh" value="#@modfolder:Assets/Behemoths.unity3d?zombieBehemoth" />
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="500"/>
+			<property name="ExperienceGain" value="5250"/>
+			<property name="MaxHealth" value="5000"/>
+			<property name="DeadBodyHitPoints" value="700"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieBehemoth"/>
+			
+			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	        <property name="PainResistPerHit" value=".6"/><!-- Radiated -->
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBoss3"/>
+            <property name="LootDropProb" value="0.1"/>
+			<property name="SizeScale" value="1.15"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="3000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_add" value="-.1,.2"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="zombieBehemothRadiated" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,walker,feral,radiated,AdvRadiated,behemoth,cp"/>
+			<property name="Prefab" value="NPC"/>
+         	<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	        <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	        <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	        <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	        <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	        <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+			<property name="SoundSleeperSense" value="sleepersense"/>
+			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+			<property name="Mesh" value="#@modfolder:Assets/Behemoths.unity3d?zombieBehemothRadiated" />
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="500"/>
+			<property name="ExperienceGain" value="10500"/>
+			<property name="MaxHealth" value="5000"/>
+			<property name="DeadBodyHitPoints" value="700"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombieBehemoth"/>
+			
+			<property name="DismemberMultiplierHead" value=".3"/><property name="DismemberMultiplierArms" value=".3"/><property name="DismemberMultiplierLegs" value=".3"/><!-- Radiated -->
+	        <property name="PainResistPerHit" value=".7"/><!-- Radiated -->
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBoss3"/>
+            <property name="LootDropProb" value="0.15"/> 
+			<property name="SizeScale" value="1.15"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="6000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_add" value="-.1,.2"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="60"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+		        <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="legendaryzombieBehemoth" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,walker,feral,AdvRadiated,Bosszombie,behemoth,cp"/>
+			<property name="Prefab" value="NPC"/>
+	        <property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	        <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	        <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	        <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	        <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	        <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+			<property name="SoundSleeperSense" value="sleepersense"/>
+			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+			<property name="Mesh" value="#@modfolder:Assets/Behemoths.unity3d?zombieBehemoth" />
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="500"/>
+			<property name="ExperienceGain" value="17500"/>
+			<property name="MaxHealth" value="5000"/>
+			<property name="DeadBodyHitPoints" value="700"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombielegendaryBehemoth"/>
+			
+			<property name="DismemberMultiplierHead" value=".2"/><property name="DismemberMultiplierArms" value=".2"/><property name="DismemberMultiplierLegs" value=".2"/><!-- Radiated -->
+	        <property name="PainResistPerHit" value=".8"/><!-- Radiated -->
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.09"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBoss4"/>
+            <property name="LootDropProb" value="0.2"/>
+			<property name="SizeScale" value="1.3"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="10000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_add" value="-.05,.25"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="800"/>
+		        <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="legendaryzombieBehemothRadiated" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,walker,feral,AdvRadiated,Bosszombie,behemoth,cp"/>
+			<property name="Prefab" value="NPC"/>
+         	<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	        <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	        <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	        <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	        <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	        <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+			<property name="SoundSleeperSense" value="sleepersense"/>
+			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+			<property name="Mesh" value="#@modfolder:Assets/Behemoths.unity3d?zombieBehemothRadiated" />
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="500"/>
+			<property name="ExperienceGain" value="32250"/>
+			<property name="MaxHealth" value="5000"/>
+			<property name="DeadBodyHitPoints" value="700"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HandItem" value="meleeHandZombielegendaryBehemoth"/>
+			
+			<property name="DismemberMultiplierHead" value=".1"/><property name="DismemberMultiplierArms" value=".1"/><property name="DismemberMultiplierLegs" value=".1"/><!-- Radiated -->
+	        <property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+			<property name="Dismemberment" value="true"/>
+			
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.09"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBoss4"/>
+            <property name="LootDropProb" value="0.25"/>
+			<property name="SizeScale" value="1.3"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="20000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_add" value="-.05,.25"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	         	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="1600"/>
+		        <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>
+		</entity_class>
+	</append>
+</config>
